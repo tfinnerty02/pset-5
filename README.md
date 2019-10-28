@@ -30,7 +30,7 @@ $ git remote add origin git@github.com:YOUR-USERNAME/pset-5.git
 ```
 7. Open up the `ProblemSet5.java` file in the text editor of your choice.
 
-That's a lot of comments. Read each one carefully, as they are designed to point you in the right direction for each exercise.
+All of the method signatures are written for you, as is the `main` method. Please read each comment carefully, as they are designed to point you in the right direction for the associated exercise.
 
 ## Exercises
 
