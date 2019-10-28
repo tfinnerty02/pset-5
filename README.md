@@ -44,7 +44,7 @@ Given two strings, return a new string built by surrounding `in` with the first 
 
 * `in` must not be `null`.
 * `out` must not be `null`.
-* `out` must be exactly four characters.
+* `out` must be exactly 4 characters.
 
 ### Exercise 2
 
@@ -59,16 +59,16 @@ Given a string and an integer, return a new string that represents the first and
 Given a string, return a new string using the middle three characters of `text`. Return `text` unchanged if any of the following requirements are not met.
 
 * `text` must not be `null`.
-* `text` must have an odd length of at least three characters.
+* `text` must have an odd length of at least 3 characters.
 
 ### Exercise 4
 
 Given two strings, determine whether or not `target` is equivalent to the middle three characters of `text`. Return `false` if any of the following requirements are not met.
 
 * `text` must not be `null`.
-* `text` must have an odd length of at least three characters.
+* `text` must have an odd length of at least 3 characters.
 * `target` must not be `null`.
-* `target` must be exactly three characters.
+* `target` must be exactly 3 characters.
 
 ### Exercise 5
 
@@ -93,7 +93,7 @@ Given a string, compute the sum of the digits in text. Return `-1` if any of the
 
 * `text` must not be `null`.
 
-Ignore characters that are not digits (effectively treating them as zeroes). All digits are assumed to be positive.
+Ignore characters that are not digits. All digits are assumed to be positive.
 
 ### Exercise 8
 
