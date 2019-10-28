@@ -8,9 +8,9 @@
  * exercise in the corresponding method. Make sure you test your code thoroughly.
  * 
  * The specifications for each exercise are outlined below. Your job is to write
- * lines of code to produce answers to my questions. Each exercise requires that
- * you ask the user to enter one or more values. Your code must meet the
- * requirements set forth in this section.
+ * lines of code to produce answers to my questions. Your code must meet the
+ * requirements set forth in this section, and must support all possible values
+ * that might be passed into your methods.
  * 
  * Work through these exercises on your own. Experiment, make mistakes, ask
  * questions, and fix your mistakes. It's the only way to get good at programming.
