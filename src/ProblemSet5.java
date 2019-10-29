@@ -30,6 +30,7 @@ public class ProblemSet5 {
       System.out.println(ps.middleMan("abcdefghijklm"));
       System.out.println(ps.isCentered("abcdefghijk", "efg"));
       System.out.println(ps.countMe("chdsl", 'a'));
+      System.out.println(ps.triplets("abcccdefffggghhhiii"));
 
       prompt.close();
     }
@@ -113,16 +114,25 @@ public class ProblemSet5 {
       }
       return -1;
     }
-    //
-    // /*
-    //  * Exercise 6.
-    //  *
-    //  * Given a string, compute the number of triplets in text.
-    //  */
-    //
-    // public int triplets(String text) {
-    //
-    // }
+
+    /*
+     * Exercise 6.
+     *
+     * Given a string, compute the number of triplets in text.
+     */
+
+    public int triplets(String text) {
+      if(text != null) {
+        int count = 0;
+        for(int i = 0; i <= text.length() - 3; i++) {
+          if(text.charAt(i) == text.charAt(i + 1) && text.charAt(i) == text.charAt(i + 2)) {
+            count++;
+          }
+        }
+        return count;
+      }
+      return -1;
+    }
     //
     // /*
     //  * Exercise 7.
