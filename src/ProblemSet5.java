@@ -19,20 +19,20 @@
 import java.util.*;
 
 public class ProblemSet5 {
-  private static Scanner prompt = new Scanner(System.in);
+    private static Scanner prompt = new Scanner(System.in);
 
     public static void main(String[] args) {
-      ProblemSet5 ps = new ProblemSet5();
-      // comment out or uncomment as needed
+        ProblemSet5 ps = new ProblemSet5();
+        // comment out or uncomment as needed
 
-      System.out.println(ps.surroundMe("aa", "bbbb"));
-      System.out.println(ps.endsMeet("abchhhhdef", 3));
-      System.out.println(ps.middleMan("abcdefghijklm"));
-      System.out.println(ps.isCentered("abcdefghijk", "efg"));
-      System.out.println(ps.countMe("chdsl", 'a'));
-      System.out.println(ps.triplets("abcccdefffggghhhiii"));
+        System.out.println(ps.surroundMe("aa", "bbbb"));
+        System.out.println(ps.endsMeet("abchhhhdef", 3));
+        System.out.println(ps.middleMan("abcdefghijklm"));
+        System.out.println(ps.isCentered("abcdefghijk", "efg"));
+        System.out.println(ps.countMe("chdsl", 'a'));
+        System.out.println(ps.triplets("abcccdefffggghhhiii"));
 
-      prompt.close();
+        prompt.close();
     }
 
     /*
@@ -42,13 +42,13 @@ public class ProblemSet5 {
      * and last two characters of out.
      */
 
-    public String surroundMe(String in, String out) {
-      if (in != null && out != null && out.length() == 4) {
-        String firstTwo = out.substring(0, 2);
-        String lastTwo = out.substring(2, 4);
-        String surroundedString = firstTwo + in + lastTwo;
-        return surroundedString;
-      }
+    public String surroundMe(String in , String out) {
+        if ( in != null && out != null && out.length() == 4) {
+            String firstTwo = out.substring(0, 2);
+            String lastTwo = out.substring(2, 4);
+            String surroundedString = firstTwo + in +lastTwo;
+            return surroundedString;
+        }
         return in;
     }
 
@@ -60,13 +60,13 @@ public class ProblemSet5 {
      */
 
     public String endsMeet(String text, int n) {
-      if (text != null && (text.length() >= 1 && text.length() <= 10) && (n >= 1 && n <= text.length())) {
-        String firstN = text.substring(0, n);
-        String lastN = text.substring(text.length() - n, text.length());
-        String endsMet = firstN + lastN;
-        return endsMet;
-      }
-      return text;
+        if (text != null && (text.length() >= 1 && text.length() <= 10) && (n >= 1 && n <= text.length())) {
+            String firstN = text.substring(0, n);
+            String lastN = text.substring(text.length() - n, text.length());
+            String endsMet = firstN + lastN;
+            return endsMet;
+        }
+        return text;
     }
 
     /*
@@ -76,12 +76,12 @@ public class ProblemSet5 {
      */
 
     public String middleMan(String text) {
-      if (text != null && text.length() % 2 == 1 && text.length() >= 3) {
-        double midpoint = text.length() / 2;
-        String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
-        return middle;
-      }
-      return text;
+        if (text != null && text.length() % 2 == 1 && text.length() >= 3) {
+            double midpoint = text.length() / 2;
+            String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
+            return middle;
+        }
+        return text;
     }
 
     /*
@@ -92,14 +92,14 @@ public class ProblemSet5 {
      */
 
     public boolean isCentered(String text, String target) {
-      if (text != null && text.length() % 2 == 1 && target != null && target.length() == 3) {
-        double midpoint = text.length() / 2;
-        String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
-        if (middle.equals(target)) {
-          return true;
+        if (text != null && text.length() % 2 == 1 && target != null && target.length() == 3) {
+            double midpoint = text.length() / 2;
+            String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
+            if (middle.equals(target)) {
+                return true;
+            }
         }
-      }
-      return false;
+        return false;
     }
 
     /*
@@ -109,10 +109,10 @@ public class ProblemSet5 {
      */
 
     public int countMe(String text, char suffix) {
-      if (text != null && ((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121))) {
-        return 4;
-      }
-      return -1;
+        if (text != null && ((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121))) {
+            return 4;
+        }
+        return -1;
     }
 
     /*
@@ -122,16 +122,16 @@ public class ProblemSet5 {
      */
 
     public int triplets(String text) {
-      if(text != null) {
-        int count = 0;
-        for(int i = 0; i <= text.length() - 3; i++) {
-          if(text.charAt(i) == text.charAt(i + 1) && text.charAt(i) == text.charAt(i + 2)) {
-            count++;
-          }
+        if (text != null) {
+            int count = 0;
+            for (int i = 0; i <= text.length() - 3; i++) {
+                if (text.charAt(i) == text.charAt(i + 1) && text.charAt(i) == text.charAt(i + 2)) {
+                    count++;
+                }
+            }
+            return count;
         }
-        return count;
-      }
-      return -1;
+        return -1;
     }
     //
     // /*
