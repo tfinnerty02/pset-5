@@ -29,6 +29,7 @@ public class ProblemSet5 {
       System.out.println(ps.endsMeet("abchhhhdef", 3));
       System.out.println(ps.middleMan("abcdefghijklm"));
       System.out.println(ps.isCentered("abcdefghijk", "efg"));
+      System.out.println(ps.countMe("chdsl", 'a'));
 
       prompt.close();
     }
@@ -99,16 +100,19 @@ public class ProblemSet5 {
       }
       return false;
     }
-    //
-    // /*
-    //  * Exercise 5.
-    //  *
-    //  * Given a string and a character, compute the number of words that end in suffix.
-    //  */
-    //
-    // public int countMe(String text, char suffix) {
-    //
-    // }
+
+    /*
+     * Exercise 5.
+     *
+     * Given a string and a character, compute the number of words that end in suffix.
+     */
+
+    public int countMe(String text, char suffix) {
+      if (text != null && ((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121))) {
+        return 4;
+      }
+      return -1;
+    }
     //
     // /*
     //  * Exercise 6.
