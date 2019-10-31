@@ -32,6 +32,7 @@ public class ProblemSet5 {
         System.out.println(ps.countMe("The the the", 'a'));
         System.out.println(ps.triplets("abcccdefffggghhhiii"));
         System.out.println(ps.addMe("And 1 and 2 and 3."));
+        System.out.println(ps.sequence("t the "));
 
         prompt.close();
     }
@@ -143,27 +144,40 @@ public class ProblemSet5 {
      */
 
     public long addMe(String text) {
-      if (text != null) {
-        long sum = 0;
-        for (int i = 0; i < text.length(); i++) {
-          if (text.charAt(i) >= 48 && text.charAt(i) <= 57) {
-            sum += Character.getNumericValue(text.charAt(i));
-          }
+        if (text != null) {
+            long sum = 0;
+            for (int i = 0; i < text.length(); i++) {
+                if (text.charAt(i) >= 48 && text.charAt(i) <= 57) {
+                    sum += Character.getNumericValue(text.charAt(i));
+                }
+            }
+            return sum;
         }
-        return sum;
-      }
-      return -1;
+        return -1;
     }
-    //
-    // /*
-    //  * Exercise 8.
-    //  *
-    //  * Given a string, compute the length of the longest sequence.
-    //  */
-    //
-    // public long sequence(String text) {
-    //
-    // }
+
+    /*
+     * Exercise 8.
+     *
+     * Given a string, compute the length of the longest sequence.
+     */
+
+    public long sequence(String text) {
+        if (text != null) {
+            long longestSequence = 0;
+            int sequenceLength = 0;
+            for (int i = 0; i < text.length() - 1; i++) {
+                if (text.charAt(i) == text.charAt(i + 1)) {
+                    sequenceLength += 1;
+                }
+                if (sequenceLength > longestSequence) {
+                    longestSequence = sequenceLength;
+                }
+            }
+            return longestSequence;
+        }
+        return -1;
+    }
     //
     // /*
     //  * Exercise 9.
