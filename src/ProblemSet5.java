@@ -29,8 +29,9 @@ public class ProblemSet5 {
         System.out.println(ps.endsMeet("abchhhhdef", 3));
         System.out.println(ps.middleMan("abcdefghijklm"));
         System.out.println(ps.isCentered("abcdefghijk", "efg"));
-        System.out.println(ps.countMe("chdsl", 'a'));
+        System.out.println(ps.countMe("The the the", 'a'));
         System.out.println(ps.triplets("abcccdefffggghhhiii"));
+        System.out.println(ps.addMe("And 1 and 2 and 3."));
 
         prompt.close();
     }
@@ -109,8 +110,9 @@ public class ProblemSet5 {
      */
 
     public int countMe(String text, char suffix) {
-        if (text != null && ((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121))) {
-            return 4;
+        if (text != null && (((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121)))) {
+            text += " ";
+            System.out.println(text);
         }
         return -1;
     }
@@ -133,16 +135,25 @@ public class ProblemSet5 {
         }
         return -1;
     }
-    //
-    // /*
-    //  * Exercise 7.
-    //  *
-    //  * Given a string, compute the sum of the digits in text.
-    //  */
-    //
-    // public long addMe(String text) {
-    //
-    // }
+
+    /*
+     * Exercise 7.
+     *
+     * Given a string, compute the sum of the digits in text.
+     */
+
+    public long addMe(String text) {
+      if (text != null) {
+        long sum = 0;
+        for (int i = 0; i < text.length(); i++) {
+          if (text.charAt(i) >= 48 && text.charAt(i) <= 57) {
+            sum += Character.getNumericValue(text.charAt(i));
+          }
+        }
+        return sum;
+      }
+      return -1;
+    }
     //
     // /*
     //  * Exercise 8.
