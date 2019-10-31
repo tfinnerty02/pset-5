@@ -34,6 +34,8 @@ public class ProblemSet5 {
         System.out.println(ps.addMe("And 1 and 2 and 3."));
         System.out.println(ps.sequence("t the "));
 
+        System.out.println(ps.isPalindrome("racecar"));
+
         prompt.close();
     }
 
@@ -190,13 +192,22 @@ public class ProblemSet5 {
     //
     // }
     //
-    // /*
-    //  * Exercise 10.
-    //  *
-    //  * Given a string, determine whether or not it is a palindrome.
-    //  */
-    //
-    // public boolean isPalindrome(String text) {
-    //
-    // }
+    /*
+     * Exercise 10.
+     *
+     * Given a string, determine whether or not it is a palindrome.
+     */
+
+    public boolean isPalindrome(String text) {
+        if (text != null) {
+            String reverse = "";
+            for (int i = text.length() - 1; i >= 0; i--) {
+                reverse = reverse + text.charAt(i);
+            }
+            if (reverse.equals(text)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
