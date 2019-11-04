@@ -25,7 +25,6 @@ public class ProblemSet5 {
 
         // run things here
 
-        System.out.print("\n");
     }
 
     /*
@@ -36,7 +35,6 @@ public class ProblemSet5 {
      */
 
     public String surroundMe(String in , String out) {
-        System.out.print("\n");
         if ( in != null && out != null && out.length() == 4) {
             String firstTwo = out.substring(0, 2);
             String lastTwo = out.substring(2, 4);
@@ -54,7 +52,6 @@ public class ProblemSet5 {
      */
 
     public String endsMeet(String text, int n) {
-        System.out.print("\n");
         if (text != null && (text.length() >= 1 && text.length() <= 10) && (n >= 1 && n <= text.length())) {
             String firstN = text.substring(0, n);
             String lastN = text.substring(text.length() - n, text.length());
@@ -71,7 +68,6 @@ public class ProblemSet5 {
      */
 
     public String middleMan(String text) {
-        System.out.print("\n");
         if (text != null && text.length() % 2 == 1 && text.length() >= 3) {
             double midpoint = text.length() / 2;
             String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
@@ -88,7 +84,6 @@ public class ProblemSet5 {
      */
 
     public boolean isCentered(String text, String target) {
-        System.out.print("\n");
         if (text != null && text.length() % 2 == 1 && target != null && target.length() == 3) {
             double midpoint = text.length() / 2;
             String middle = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
@@ -106,7 +101,6 @@ public class ProblemSet5 {
      */
 
     public int countMe(String text, char suffix) {
-        System.out.print("\n");
         if (text != null && (((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121)))) {
             int count = 0;
             String suffixString = Character.toString(suffix);
@@ -128,7 +122,6 @@ public class ProblemSet5 {
      */
 
     public int triplets(String text) {
-        System.out.print("\n");
         if (text != null) {
             int count = 0;
             for (int i = 0; i <= text.length() - 3; i++) {
@@ -149,7 +142,6 @@ public class ProblemSet5 {
      */
 
     public long addMe(String text) {
-        System.out.print("\n");
         if (text != null) {
             long sum = 0;
             for (int i = 0; i < text.length(); i++) {
@@ -169,7 +161,6 @@ public class ProblemSet5 {
      */
 
     public long sequence(String text) {
-        System.out.print("\n");
         if (text != null) {
             long longestSequence = 0;
             int sequenceLength = 0;
@@ -194,7 +185,6 @@ public class ProblemSet5 {
      */
 
     public String intertwine(String a, String b) {
-        System.out.print("\n");
         if (a != null && b != null) {
             String outputString = "";
             int i;
@@ -216,7 +206,6 @@ public class ProblemSet5 {
      */
 
     public boolean isPalindrome(String text) {
-        System.out.print("\n");
         if (text != null) {
             String reverse = "";
             for (int i = text.length() - 1; i >= 0; i--) {
