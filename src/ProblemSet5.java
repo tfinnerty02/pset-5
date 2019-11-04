@@ -24,16 +24,6 @@ public class ProblemSet5 {
         ProblemSet5 ps = new ProblemSet5();
 
         // run things here
-        System.out.println(ps.surroundMe("aaa", "bbbb"));
-        System.out.println(ps.endsMeet("abchhhhdefh", 8));
-        System.out.println(ps.middleMan("abcdefghijklmn"));
-        System.out.println(ps.isCentered("hh", "efg"));
-        System.out.println(ps.countMe("The the the", 'e'));
-        System.out.println(ps.triplets("abcccdefffggghhhiii"));
-        System.out.println(ps.addMe("And 1 and 2 and 3 and 2 and 1."));
-        System.out.println(ps.sequence("t the "));
-        System.out.println(ps.intertwine("aaa", "bbbbbbbb"));
-        System.out.println(ps.isPalindrome("racecar"));
 
         System.out.print("\n");
     }
