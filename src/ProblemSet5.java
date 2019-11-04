@@ -22,11 +22,10 @@ public class ProblemSet5 {
 
     public static void main(String[] args) {
         ProblemSet5 ps = new ProblemSet5();
-        // comment out or uncomment as needed
 
-        // put things here
+        // run things here
         System.out.println(ps.surroundMe("aaa", "bbbb"));
-        System.out.println(ps.endsMeet("abchhhhdefh", 66));
+        System.out.println(ps.endsMeet("abchhhhdefh", 8));
         System.out.println(ps.middleMan("abcdefghijklmn"));
         System.out.println(ps.isCentered("hh", "efg"));
         System.out.println(ps.countMe("The the the", 'e'));
@@ -231,7 +230,7 @@ public class ProblemSet5 {
         if (text != null) {
             String reverse = "";
             for (int i = text.length() - 1; i >= 0; i--) {
-                reverse = reverse + text.charAt(i);
+                reverse += text.charAt(i);
             }
             if (reverse.equals(text)) {
                 return true;
