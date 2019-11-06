@@ -23,8 +23,6 @@ public class ProblemSet5 {
     public static void main(String[] args) {
         ProblemSet5 ps = new ProblemSet5();
 
-        // run things here
-
     }
 
     /*
@@ -35,7 +33,7 @@ public class ProblemSet5 {
      */
 
     public String surroundMe(String in , String out) {
-        if ( in != null && out != null && out.length() == 4) {
+        if (in != null && out != null && out.length() == 4) {
             String firstTwo = out.substring(0, 2);
             String lastTwo = out.substring(2, 4);
             String surroundedString = firstTwo + in +lastTwo;
@@ -127,7 +125,6 @@ public class ProblemSet5 {
             for (int i = 0; i <= text.length() - 3; i++) {
                 if (text.charAt(i) == text.charAt(i + 1) && text.charAt(i) == text.charAt(i + 2)) {
                     count++;
-                    i += 2;
                 }
             }
             return count;
@@ -162,15 +159,18 @@ public class ProblemSet5 {
 
     public long sequence(String text) {
         if (text != null) {
+            text += " ";
             long longestSequence = 0;
-            int sequenceLength = 0;
-            for (int i = 0; i < text.length() - 1; i++) {
-                if (text.charAt(i) == text.charAt(i + 1)) {
+            long sequenceLength = 1;
+            for (int i = 0; i < text.length() - 2; i++) {
+                while (text.charAt(i) == text.charAt(i + 1)) {
                     sequenceLength += 1;
+                    i++;
                 }
                 if (sequenceLength > longestSequence) {
                     longestSequence = sequenceLength;
                 }
+                sequenceLength = 1;
             }
             return longestSequence;
         }
